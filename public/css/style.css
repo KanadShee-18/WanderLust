@@ -88,11 +88,13 @@ body {
 
 .card-img-overlay {
   opacity: 0;
+  transition: 0.5s;
 }
 
 .card-img-overlay:hover {
   opacity: 0.2;
   background-color: white;
+  /* box-shadow: #817f7f 10px 16px; */
 }
 
 /* New Page */
