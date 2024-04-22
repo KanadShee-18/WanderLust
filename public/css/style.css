@@ -20,10 +20,36 @@ body {
 }
 
 .nav-link {
+  margin-right: 1rem;
   color: #222222 !important;
+  position: relative !important;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #f3424d;
+  position: absolute;
+  left: 8px;
+  bottom: 3px;
+  transition: 0.7s;
+}
+
+.nav-link:hover::after {
+  width: 75%;
 }
 
 /* Footer */
+
+.f-info-socials i {
+  transition: 0.3s;
+}
+
+.f-info-socials i:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+}
 
 .f-info-links a {
   text-decoration: none;
@@ -63,11 +89,12 @@ body {
 
 .card {
   border: none !important;
+  border-radius: 1rem !important;
   margin-bottom: 2rem;
 }
 
 .card-img-top {
-  border-radius: 1rem !important;
+  border-radius: 1rem 1rem 0 0 !important;
   width: 100% !important;
   object-fit: cover !important;
 }
@@ -76,8 +103,14 @@ body {
   padding: 0 !important;
 }
 
+.card-text {
+  padding-left: 7px;
+  padding-bottom: 2px;
+}
+
 .card-text p {
   font-weight: 400 !important;
+  /* color: #974141; */
 }
 
 .listing-link {
@@ -86,8 +119,18 @@ body {
 
 /* card effect */
 
+.card {
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 5px 15px #646262;
+}
+
 .card-img-overlay {
   opacity: 0;
+  border-radius: 1rem !important;
   transition: 0.5s;
 }
 
