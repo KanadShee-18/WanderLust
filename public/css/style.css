@@ -48,6 +48,7 @@ body {
 
 .f-info-socials i:hover {
   cursor: pointer;
+  color: #f3424d;
   transform: translateY(-3px);
 }
 
