@@ -8,6 +8,7 @@ const ejsMate = require("ejs-mate");
 const wrapAsync = require("./utills/wrapAsync.js");
 const ExpressError = require("./utills/ExpressError.js");
 const { wrap } = require("module");
+const { listingSchema } = require("./schema.js");
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
@@ -65,8 +66,10 @@ app.get(
 app.post(
   "/listings",
   wrapAsync(async (req, res, next) => {
-    if (!req.body.listing) {
-      throw new ExpressError(400, "Send valid data for lisitng!");
+    let result = listingSchema.validate(req.body);
+    console.log(result);
+    if (result.error) {
+      throw new ExpressError(400, result.error);
     }
     const newListing = new Listing(req.body.listing);
     await newListing.save();
