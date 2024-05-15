@@ -20,6 +20,7 @@ body {
 }
 
 .nav-link {
+  font-weight: 600 !important;
   margin-right: 1rem;
   color: #222222 !important;
   position: relative !important;
@@ -33,7 +34,7 @@ body {
   position: absolute;
   left: 8px;
   bottom: 3px;
-  transition: 0.7s;
+  transition: 0.9s;
 }
 
 .nav-link:hover::after {
@@ -146,12 +147,20 @@ body {
 .add-btn {
   background-color: #f3424d !important;
   border: none !important;
+  transition: 0.4s ease !important;
+}
+.add-btn:hover {
+  transform: scale(1.05);
 }
 
 /* Edit page */
 .edit-btn {
   background-color: #f3424d !important;
   border: none !important;
+  transition: 0.4s ease !important;
+}
+.edit-btn:hover {
+  transform: scale(1.05);
 }
 
 /* Show Page */
@@ -171,6 +180,10 @@ body {
 .delete-btn {
   background-color: #fc2230 !important;
   border: none !important;
+  transition: 0.4s ease !important;
+}
+.delete-btn:hover {
+  transform: scale(1.05);
 }
 
 .show-card {
